@@ -1,0 +1,1376 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+:root {
+    --body-background: rgb(225, 222, 222);
+    --green: rgba(58, 158, 140, 255);
+    --blue: rgba(3, 136, 161, 255);
+    --brown: rgba(152, 105, 50, 255);
+    --font-lato: 'Lato', sans-serif;
+    --font-source: 'Source Sans Pro', sans-serif;
+}
+
+* {
+    font-family: var(--font-lato);
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--body-background);
+}
+
+.mobile-menu {
+    display: none;
+}
+
+
+/* Small Device*/
+
+@media (max-width:640px) {
+    .mobile-menu {
+        display: block;
+        color: var(--blue);
+        font-size: 20px;
+        padding: 10px;
+    }
+    header {
+        background-color: white;
+        height: 80px;
+        border-bottom: 1px solid grey;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0%;
+        z-index: 1;
+    }
+    header .logo {
+        margin-top: 2px;
+        padding: 2px;
+    }
+    header .logo img {
+        margin-left: 20px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid var(--blue);
+    }
+    header nav {
+        display: none;
+    }
+    header nav ul,
+    header .search ul {
+        margin-right: 20px;
+        list-style-type: none;
+        align-items: center;
+        display: flex;
+    }
+    header nav a {
+        color: var(--blue);
+        font-weight: bold;
+        text-decoration: none;
+        transition: all .3s;
+    }
+    header nav a:hover {
+        border-bottom: 2px solid var(--brown);
+    }
+    header nav ul li {
+        padding: 0 10px;
+    }
+    header .search {
+        margin-right: 10px;
+    }
+    header .search i {
+        color: var(--blue);
+        font-size: 20px;
+    }
+    main {
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        background-image: url("../img/01.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    main .about-us {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    main .about-us .box {
+        width: auto;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding-top: 30px;
+        text-align: center;
+    }
+    main .about-us .box ul {
+        list-style-type: none;
+        line-height: 30px;
+    }
+    main .about-us .box img {
+        width: 80px;
+        border-radius: 50%;
+        border: 1px solid var(--blue);
+    }
+    main .about-us .box p {
+        padding: 15px 0;
+    }
+    main .about-us .box p span {
+        font-weight: bold;
+    }
+    main .about-us .box button {
+        text-transform: uppercase;
+        margin: 10px;
+        padding: 5px;
+        height: 40px;
+        border-radius: 4px;
+        background-color: var(--blue);
+        color: white;
+        border: none;
+        transition: all .2s;
+        cursor: pointer;
+    }
+    main .about-us .box button:hover {
+        background-color: var(--green);
+        color: white;
+        line-height: 24px;
+    }
+    main .booking {
+        display: grid;
+        grid-template-columns: 1fr;
+        line-height: 35px;
+        font-family: var(--font-source);
+    }
+    main .booking .box-booking {
+        width: auto;
+        height: auto;
+        background: rgba(23, 50, 93, 0.8);
+        padding: 30px;
+    }
+    main .booking .box-booking .flight {
+        display: flex;
+    }
+    main .booking .box-booking .flight button {
+        color: var(--blue);
+        background-color: rgba(255, 255, 255, 0.7);
+        border: 1px solid white;
+        width: 100px;
+        padding: 5px;
+        cursor: pointer;
+    }
+    main .booking .box-booking .flight button:hover {
+        color: white;
+        background-color: var(--green);
+    }
+    main .booking .form-inputs form {
+        display: inline-block;
+        padding: 5px;
+    }
+    main .booking .form-inputs form label {
+        display: block;
+    }
+    main .booking .form-inputs form input {
+        background-color: rgba(255, 255, 255, 0.7);
+        border: 1px solid white;
+        color: var(--green);
+        width: 200px;
+        height: 30px;
+        text-align: center;
+    }
+    main .booking .form-inputs {
+        color: white;
+    }
+    main .booking .form-inputs button {
+        display: block;
+        text-transform: uppercase;
+        margin: 10px;
+        margin-left: 5px;
+        padding: 5px;
+        height: 40px;
+        border-radius: 4px;
+        background-color: var(--blue);
+        color: white;
+        border: none;
+        transition: all .2s;
+        cursor: pointer;
+    }
+    main .booking .form-inputs button:hover {
+        background-color: var(--green);
+        color: white;
+        line-height: 24px;
+    }
+    section {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    section .container {
+        width: auto;
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+    section .h1 {
+        text-align: center;
+        color: var(--blue);
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    section .container .best-dest {
+        text-align: left;
+        margin: 10px 0;
+        background-color: white;
+        width: 300px;
+        transition: all .2s;
+        cursor: pointer;
+    }
+    section .container .best-dest:hover {
+        box-shadow: -12px 5px 6px 5px var(--green);
+        -webkit-box-shadow: -12px 5px 6px 5px var(--green);
+        -moz-box-shadow: -12px 5px 6px 5px var(--green);
+    }
+    section .container .best-dest .card-body {
+        padding: 10px;
+    }
+    .second {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .second fieldset legend h2 {
+        color: var(--brown);
+    }
+    section .winter {
+        border: none;
+        height: auto;
+        background-image: url("../img/winter.jpg");
+        background-size: cover;
+    }
+    fieldset {
+        margin: 10px;
+        padding: 50px;
+        width: auto;
+        height: auto;
+        border: 2px solid var(--body-background);
+    }
+    legend {
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    section .winter .text-winter {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding-top: 30px;
+        text-align: center;
+    }
+    section .winter .text-winter button {
+        width: 100px;
+        padding: 10px;
+        margin: 20px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        background-color: var(--blue);
+        color: white;
+        border: none;
+        transition: all .2s;
+        cursor: pointer;
+    }
+    section .winter .text-winter button:hover {
+        background-color: var(--green);
+        color: white;
+    }
+    section .summer {
+        border: none;
+        height: auto;
+        background-image: url("../img/summer.jpg");
+        background-size: cover;
+    }
+    section .summer .text-summer {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding-top: 30px;
+        text-align: center;
+    }
+    section .summer .text-summer button {
+        width: 100px;
+        margin: 20px;
+        padding: 10px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        background-color: var(--blue);
+        color: white;
+        border: none;
+        transition: all .2s;
+        cursor: pointer;
+    }
+    section .summer .text-summer button:hover {
+        background-color: var(--green);
+        color: white;
+    }
+    section .article {
+        width: auto;
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 10px;
+    }
+    section .article .best-dest {
+        position: relative;
+        background-color: var(--green);
+        width: 308px;
+        border: 1px solid white;
+        padding: 2px;
+        transition: all .3s;
+        cursor: pointer;
+    }
+    section .article .best-dest:hover {
+        background-color: var(--blue);
+        box-shadow: -12px 5px 6px 5px var(--green);
+        -webkit-box-shadow: -12px 5px 6px 5px var(--green);
+        -moz-box-shadow: -12px 5px 6px 5px var(--green);
+    }
+    section .article .best-dest .card-body h4 {
+        border-bottom: 1px solid white;
+        padding: 2px;
+    }
+    section .article .best-dest .card-body p {
+        margin-bottom: 30px;
+        font-family: var(--font-source);
+        text-align: justify;
+    }
+    section .article .best-dest .card-body .price {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
+    }
+    section .discount-today h1 {
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    section .discount-today h1 a {
+        text-decoration: none;
+        color: var(--green);
+        transition: all .3s;
+    }
+    section .discount-today h1 a:hover {
+        color: var(--blue);
+        text-decoration: underline;
+        text-decoration: none;
+        border-bottom: 2px solid var(--brown);
+    }
+    .best-dest {
+        width: 100px;
+    }
+    .img-dest>img {
+        width: 300px;
+        height: 200px;
+    }
+    .first-discount>img {
+        width: 300px;
+        height: 200px;
+    }
+    footer {
+        height: auto;
+        background-color: var(--blue);
+        background-image: url('../img/map.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 200px;
+        border-top: 1px solid white;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    footer .contact-social-media {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+    footer .contact-social-media .contact {
+        display: inline-block;
+    }
+    footer .contact-social-media .social-media {
+        text-align: center;
+        width: auto;
+        padding: 0 40px;
+        margin-top: 40px;
+    }
+    footer .contact-social-media .social-media ul {
+        width: auto;
+        list-style-type: none;
+        margin-top: 10px;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+    footer .contact-social-media .social-media ul li {
+        font-size: 30px;
+    }
+    footer .contact-social-media .social-media ul li a {
+        color: white;
+    }
+    footer .contact-social-media .social-media ul li a:hover {
+        color: var(--green);
+    }
+    footer .listat {
+        align-items: center;
+    }
+    footer .listat a {
+        font-weight: bold;
+        color: var(--brown);
+        text-decoration: none;
+        transition: all .3s;
+    }
+    footer .listat a:hover {
+        color: var(--green);
+    }
+    footer .listat ul li {
+        padding: 5px;
+        font-size: 20px;
+        line-height: 23px;
+    }
+    footer .listat ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    footer .contact {
+        width: 350px;
+    }
+    footer .contact form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    footer .contact button {
+        padding: 8px;
+        color: white;
+        border-radius: 5%;
+        background-color: #478ac9;
+        border: 1px solid white;
+        cursor: pointer;
+    }
+    footer .contact input {
+        width: 80%;
+        border: 1px solid black;
+        border-radius: 3px;
+        padding: 8px;
+    }
+    footer .contact h3 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    footer .contact p {
+        font-size: 14px;
+        line-height: 36px;
+    }
+}
+
+
+/* Medium Device*/
+
+@media (min-width:640px) and (max-width:1119px) {
+    .mobile-menu {
+        display: block;
+    }
+    header {
+        background-color: white;
+        height: 80px;
+        border-bottom: 1px solid grey;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0%;
+        z-index: 1;
+    }
+    header .logo {
+        margin-top: 2px;
+        padding: 2px;
+    }
+    header .logo img {
+        margin-left: 20px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid var(--blue);
+    }
+    header nav {
+        display: none;
+    }
+    header nav ul,
+    header .search ul {
+        margin-right: 20px;
+        list-style-type: none;
+        align-items: center;
+        display: flex;
+    }
+    header nav a {
+        color: var(--blue);
+        font-weight: bold;
+        text-decoration: none;
+        transition: all .3s;
+    }
+    header nav a:hover {
+        border-bottom: 2px solid var(--brown);
+    }
+    header nav ul li {
+        padding: 0 10px;
+    }
+    header .search {
+        margin-right: 10px;
+    }
+    header .search i {
+        color: var(--blue);
+        font-size: 20px;
+    }
+    main {
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-image: url("../img/01.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    main .about-us {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    main .about-us .box {
+        width: auto;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding-top: 30px;
+        text-align: center;
+    }
+    main .about-us .box ul {
+        list-style-type: none;
+        line-height: 30px;
+    }
+    main .about-us .box img {
+        width: 80px;
+        border-radius: 50%;
+        border: 1px solid var(--blue);
+    }
+    main .about-us .box p {
+        padding: 15px 0;
+    }
+    main .about-us .box p span {
+        font-weight: bold;
+    }
+    main .about-us .box button {
+        text-transform: uppercase;
+        margin: 10px;
+        padding: 5px;
+        height: 40px;
+        border-radius: 4px;
+        background-color: var(--blue);
+        color: white;
+        border: none;
+        transition: all .2s;
+        cursor: pointer;
+    }
+    main .about-us .box button:hover {
+        background-color: var(--green);
+        color: white;
+        line-height: 24px;
+    }
+    main .booking {
+        display: grid;
+        grid-template-columns: 1fr;
+        line-height: 35px;
+        font-family: var(--font-source);
+    }
+    main .booking .box-booking {
+        width: auto;
+        height: auto;
+        background: rgba(23, 50, 93, 0.8);
+        padding: 30px;
+    }
+    main .booking .box-booking .flight {
+        display: flex;
+    }
+    main .booking .box-booking .flight button {
+        color: var(--blue);
+        background-color: rgba(255, 255, 255, 0.7);
+        border: 1px solid white;
+        width: 100px;
+        padding: 5px;
+        cursor: pointer;
+    }
+    main .booking .box-booking .flight button:hover {
+        color: white;
+        background-color: var(--green);
+    }
+    main .booking .form-inputs form {
+        display: inline-block;
+        padding: 5px;
+    }
+    main .booking .form-inputs form label {
+        display: block;
+    }
+    main .booking .form-inputs form input {
+        background-color: rgba(255, 255, 255, 0.7);
+        border: 1px solid white;
+        color: var(--green);
+        width: 200px;
+        height: 30px;
+        text-align: center;
+    }
+    main .booking .form-inputs {
+        color: white;
+    }
+    main .booking .form-inputs button {
+        display: block;
+        text-transform: uppercase;
+        margin: 10px;
+        margin-left: 5px;
+        padding: 5px;
+        height: 40px;
+        border-radius: 4px;
+        background-color: var(--blue);
+        color: white;
+        border: none;
+        transition: all .2s;
+        cursor: pointer;
+    }
+    main .booking .form-inputs button:hover {
+        background-color: var(--green);
+        color: white;
+        line-height: 24px;
+    }
+    section {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    section .container {
+        width: auto;
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+    section .h1 {
+        text-align: center;
+        color: var(--blue);
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    section .container .best-dest {
+        text-align: left;
+        margin: 10px 0;
+        background-color: white;
+        width: 300px;
+        transition: all .2s;
+        cursor: pointer;
+    }
+    section .container .best-dest:hover {
+        box-shadow: -12px 5px 6px 5px var(--green);
+        -webkit-box-shadow: -12px 5px 6px 5px var(--green);
+        -moz-box-shadow: -12px 5px 6px 5px var(--green);
+    }
+    section .container .best-dest .card-body {
+        padding: 10px;
+    }
+    .second {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .second fieldset legend h2 {
+        color: var(--brown);
+    }
+    section .winter {
+        border: none;
+        height: auto;
+        background-image: url("../img/winter.jpg");
+        background-size: cover;
+    }
+    fieldset {
+        margin: 10px;
+        padding: 50px;
+        width: auto;
+        height: auto;
+        border: 2px solid var(--body-background);
+    }
+    legend {
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    section .winter .text-winter {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding-top: 30px;
+        text-align: center;
+    }
+    section .winter .text-winter button {
+        width: 100px;
+        padding: 10px;
+        margin: 20px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        background-color: var(--blue);
+        color: white;
+        border: none;
+        transition: all .2s;
+        cursor: pointer;
+    }
+    section .winter .text-winter button:hover {
+        background-color: var(--green);
+        color: white;
+    }
+    section .summer {
+        border: none;
+        height: auto;
+        background-image: url("../img/summer.jpg");
+        background-size: cover;
+    }
+    section .summer .text-summer {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding-top: 30px;
+        text-align: center;
+    }
+    section .summer .text-summer button {
+        width: 100px;
+        margin: 20px;
+        padding: 10px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        background-color: var(--blue);
+        color: white;
+        border: none;
+        transition: all .2s;
+        cursor: pointer;
+    }
+    section .summer .text-summer button:hover {
+        background-color: var(--green);
+        color: white;
+    }
+    section .article {
+        width: auto;
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 10px;
+    }
+    section .article .best-dest {
+        position: relative;
+        background-color: var(--green);
+        width: 308px;
+        border: 1px solid white;
+        padding: 2px;
+        transition: all .3s;
+        cursor: pointer;
+    }
+    section .article .best-dest:hover {
+        background-color: var(--blue);
+        box-shadow: -12px 5px 6px 5px var(--green);
+        -webkit-box-shadow: -12px 5px 6px 5px var(--green);
+        -moz-box-shadow: -12px 5px 6px 5px var(--green);
+    }
+    section .article .best-dest .card-body h4 {
+        border-bottom: 1px solid white;
+        padding: 2px;
+    }
+    section .article .best-dest .card-body p {
+        margin-bottom: 30px;
+        font-family: var(--font-source);
+        text-align: justify;
+    }
+    section .article .best-dest .card-body .price {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
+    }
+    section .discount-today h1 {
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    section .discount-today h1 a {
+        text-decoration: none;
+        color: var(--green);
+        transition: all .3s;
+    }
+    section .discount-today h1 a:hover {
+        color: var(--blue);
+        text-decoration: underline;
+        text-decoration: none;
+        border-bottom: 2px solid var(--brown);
+    }
+    .best-dest {
+        width: 100px;
+    }
+    .img-dest>img {
+        width: 300px;
+        height: 200px;
+    }
+    .first-discount>img {
+        width: 300px;
+        height: 200px;
+    }
+    footer {
+        height: auto;
+        background-color: var(--blue);
+        background-image: url('../img/map.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 200px;
+        border-top: 1px solid white;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    footer .contact-social-media {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+    footer .contact-social-media .contact {
+        display: inline-block;
+    }
+    footer .contact-social-media .social-media {
+        text-align: center;
+        width: auto;
+        padding: 0 40px;
+        margin-top: 40px;
+    }
+    footer .contact-social-media .social-media ul {
+        width: auto;
+        list-style-type: none;
+        margin-top: 10px;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+    footer .contact-social-media .social-media ul li {
+        font-size: 30px;
+    }
+    footer .contact-social-media .social-media ul li a {
+        color: white;
+    }
+    footer .contact-social-media .social-media ul li a:hover {
+        color: var(--green);
+    }
+    footer .listat {
+        align-items: center;
+    }
+    footer .listat a {
+        font-weight: bold;
+        color: var(--brown);
+        text-decoration: none;
+        transition: all .3s;
+    }
+    footer .listat a:hover {
+        color: var(--green);
+    }
+    footer .listat ul li {
+        padding: 5px;
+        font-size: 20px;
+        line-height: 23px;
+    }
+    footer .listat ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    footer .contact {
+        width: 350px;
+    }
+    footer .contact form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    footer .contact button {
+        padding: 8px;
+        color: white;
+        border-radius: 5%;
+        background-color: #478ac9;
+        border: 1px solid white;
+        cursor: pointer;
+    }
+    footer .contact input {
+        width: 80%;
+        border: 1px solid black;
+        border-radius: 3px;
+        padding: 8px;
+    }
+    footer .contact h3 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    footer .contact p {
+        font-size: 14px;
+        line-height: 36px;
+    }
+}
+
+
+/* Large Device*/
+
+@media (min-width:1120px) {
+    header {
+        background-color: white;
+        height: 80px;
+        border-bottom: 1px solid grey;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0%;
+        z-index: 1;
+    }
+    header .logo {
+        margin-top: 2px;
+        padding: 2px;
+    }
+    header .logo img {
+        margin-left: 20px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid var(--blue);
+    }
+    header nav {
+        font-size: 20px;
+    }
+    header nav ul,
+    header .search ul {
+        margin-right: 20px;
+        list-style-type: none;
+        align-items: center;
+        display: flex;
+    }
+    header nav a {
+        color: var(--blue);
+        font-weight: bold;
+        text-decoration: none;
+        transition: all .3s;
+    }
+    header nav a:hover {
+        border-bottom: 2px solid var(--brown);
+    }
+    header nav ul li {
+        padding: 0 10px;
+    }
+    header .search {
+        margin-right: 10px;
+    }
+    header .search i {
+        color: var(--blue);
+        font-size: 20px;
+    }
+    main {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-image: url("../img/01.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    main .about-us {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+    main .about-us .box {
+        width: 400px;
+        height: 400px;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding-top: 30px;
+        text-align: center;
+    }
+    main .about-us .box ul {
+        list-style-type: none;
+        line-height: 30px;
+    }
+    main .about-us .box img {
+        width: 80px;
+        border-radius: 50%;
+        border: 1px solid var(--blue);
+    }
+    main .about-us .box p {
+        padding: 15px 0;
+    }
+    main .about-us .box p span {
+        font-weight: bold;
+    }
+    main .about-us .box button {
+        text-transform: uppercase;
+        margin: 10px;
+        padding: 5px;
+        height: 40px;
+        border-radius: 4px;
+        background-color: var(--blue);
+        color: white;
+        border: none;
+        transition: all .2s;
+        cursor: pointer;
+    }
+    main .about-us .box button:hover {
+        background-color: var(--green);
+        color: white;
+        line-height: 24px;
+    }
+    main .booking {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+        line-height: 35px;
+        font-family: var(--font-source);
+    }
+    main .booking .box-booking {
+        width: 400px;
+        height: 400px;
+        background: rgba(23, 50, 93, 0.8);
+        padding: 50px;
+    }
+    main .booking .box-booking .flight {
+        display: flex;
+    }
+    main .booking .box-booking .flight button {
+        color: var(--blue);
+        background-color: rgba(255, 255, 255, 0.7);
+        border: 1px solid white;
+        width: 100px;
+        padding: 5px;
+        cursor: pointer;
+    }
+    main .booking .box-booking .flight button:hover {
+        color: white;
+        background-color: var(--green);
+    }
+    main .booking .form-inputs form {
+        display: inline-block;
+        padding: 5px;
+    }
+    main .booking .form-inputs form label {
+        display: block;
+    }
+    main .booking .form-inputs form input {
+        background-color: rgba(255, 255, 255, 0.7);
+        border: 1px solid white;
+        color: var(--green);
+        width: 200px;
+        height: 30px;
+        text-align: center;
+    }
+    main .booking .form-inputs {
+        color: white;
+    }
+    main .booking .form-inputs button {
+        display: block;
+        text-transform: uppercase;
+        margin: 10px;
+        margin-left: 5px;
+        padding: 5px;
+        height: 40px;
+        border-radius: 4px;
+        background-color: var(--blue);
+        color: white;
+        border: none;
+        transition: all .2s;
+        cursor: pointer;
+    }
+    main .booking .form-inputs button:hover {
+        background-color: var(--green);
+        color: white;
+        line-height: 24px;
+    }
+    section {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    section .container {
+        width: 1200px;
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+    section .h1 {
+        text-align: center;
+        color: var(--blue);
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    section .container .best-dest {
+        text-align: left;
+        margin: 10px 0;
+        background-color: white;
+        width: 300px;
+        transition: all .2s;
+        cursor: pointer;
+    }
+    section .container .best-dest:hover {
+        box-shadow: -12px 5px 6px 5px var(--green);
+        -webkit-box-shadow: -12px 5px 6px 5px var(--green);
+        -moz-box-shadow: -12px 5px 6px 5px var(--green);
+    }
+    section .container .best-dest .card-body {
+        padding: 10px;
+    }
+    .second {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .second fieldset legend h2 {
+        color: var(--brown);
+    }
+    section .winter {
+        border: none;
+        height: 500px;
+        background-image: url("../img/winter.jpg");
+        background-size: cover;
+    }
+    fieldset {
+        margin: 10px;
+        padding: 10px;
+        width: 700px;
+        height: 480px;
+        border: 2px solid var(--body-background);
+    }
+    legend {
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    section .winter .text-winter {
+        position: relative;
+        left: 235px;
+        top: 110px;
+        width: 250px;
+        height: 250px;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding-top: 30px;
+        text-align: center;
+    }
+    section .winter .text-winter button {
+        width: 100px;
+        padding: 10px;
+        margin: 20px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        background-color: var(--blue);
+        color: white;
+        border: none;
+        transition: all .2s;
+        cursor: pointer;
+    }
+    section .winter .text-winter button:hover {
+        background-color: var(--green);
+        color: white;
+    }
+    section .summer {
+        border: none;
+        height: 500px;
+        background-image: url("../img/summer.jpg");
+        background-size: cover;
+    }
+    section .summer .text-summer {
+        position: relative;
+        left: 235px;
+        top: 110px;
+        width: 250px;
+        height: 250px;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding-top: 30px;
+        text-align: center;
+    }
+    section .summer .text-summer button {
+        width: 100px;
+        margin: 20px;
+        padding: 10px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        background-color: var(--blue);
+        color: white;
+        border: none;
+        transition: all .2s;
+        cursor: pointer;
+    }
+    section .summer .text-summer button:hover {
+        background-color: var(--green);
+        color: white;
+    }
+    section .article {
+        width: 1200px;
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        gap: 10px;
+    }
+    section .article .best-dest {
+        position: relative;
+        background-color: var(--green);
+        width: 308px;
+        border: 1px solid white;
+        padding: 2px;
+        transition: all .3s;
+        cursor: pointer;
+    }
+    section .article .best-dest:hover {
+        background-color: var(--blue);
+        box-shadow: -12px 5px 6px 5px var(--green);
+        -webkit-box-shadow: -12px 5px 6px 5px var(--green);
+        -moz-box-shadow: -12px 5px 6px 5px var(--green);
+    }
+    section .article .best-dest .card-body h4 {
+        border-bottom: 1px solid white;
+        padding: 2px;
+    }
+    section .article .best-dest .card-body p {
+        margin-bottom: 30px;
+        font-family: var(--font-source);
+        text-align: justify;
+    }
+    section .article .best-dest .card-body .price {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
+    }
+    section .discount-today h1 {
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    section .discount-today h1 a {
+        text-decoration: none;
+        color: var(--green);
+        transition: all .3s;
+    }
+    section .discount-today h1 a:hover {
+        color: var(--blue);
+        text-decoration: underline;
+        text-decoration: none;
+        border-bottom: 2px solid var(--brown);
+    }
+    .best-dest {
+        width: 100px;
+    }
+    .img-dest>img {
+        width: 300px;
+        height: 200px;
+    }
+    .first-discount>img {
+        width: 300px;
+        height: 200px;
+    }
+    footer {
+        height: 150px;
+        background-color: var(--blue);
+        background-image: url('../img/map.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 200px;
+        border-top: 1px solid white;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    footer .contact-social-media {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    footer .contact-social-media .contact {
+        display: inline-block;
+    }
+    footer .contact-social-media .social-media {
+        text-align: center;
+        width: 400px;
+        padding: 0 40px;
+        margin-top: 40px;
+    }
+    footer .contact-social-media .social-media ul {
+        width: 300px;
+        list-style-type: none;
+        margin-top: 10px;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    footer .contact-social-media .social-media ul li {
+        font-size: 30px;
+    }
+    footer .contact-social-media .social-media ul li a {
+        color: white;
+    }
+    footer .contact-social-media .social-media ul li a:hover {
+        color: var(--green);
+    }
+    footer .listat {
+        align-items: center;
+    }
+    footer .listat a {
+        font-weight: bold;
+        padding: 5px;
+        color: var(--brown);
+        text-decoration: none;
+        transition: all .3s;
+    }
+    footer .listat a:hover {
+        color: var(--green);
+    }
+    footer .listat ul li {
+        padding: 5px;
+        font-size: 20px;
+        line-height: 23px;
+    }
+    footer .listat ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    footer .contact {
+        width: 350px;
+    }
+    footer .contact form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    footer .contact button {
+        padding: 8px;
+        color: white;
+        border-radius: 5%;
+        background-color: #478ac9;
+        border: 1px solid white;
+        cursor: pointer;
+    }
+    footer .contact input {
+        width: 80%;
+        border: 1px solid black;
+        border-radius: 3px;
+        padding: 8px;
+    }
+    footer .contact h3 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    footer .contact p {
+        font-size: 14px;
+        line-height: 36px;
+    }
+}
